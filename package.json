@@ -1,0 +1,41 @@
+{
+  "name": "cypress-automation-framework",
+  "version": "1.0.0",
+  "description": "Cypress Automation project with cucumber and API testing support.",
+  "main": "index.js",
+   "scripts": {
+    "cypress:open:dev": "cypress open --e2e --browser chrome -e ENV=DEV",
+    "cypress:open:tst": "cypress open --e2e --browser chrome -e ENV=TST",
+    "cypress:runner:api:tst": "cypress run --spec cypress/journeys/features/api//*.feature --browser chrome -e ENV=TST",
+    "cypress:runner:e2e:tst": "cypress run --spec cypress/journeys/features/e2e//*.feature --browser chrome -e ENV=TST"
+  },
+
+  "keywords": [
+    "Cypress",
+    "Gherkin",
+    "Cucumber",
+    "API",
+    "E2E",
+    "Testing",
+    "Automation"
+  ],
+  "author": "Kiuvi Services",
+  "license": "ISC",
+  "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^22.0.1",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.4",
+    "@cucumber/cucumber": "^11.2.0",
+    "@faker-js/faker": "^9.6.0",
+    "cypress": "^14.2.1",
+    "cypress-automation-framework": "file:",
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "cypress-plugin-api": "^2.11.1",
+    "esbuild": "latest",
+    "eslint": "^9.22.0",
+    "eslint-plugin-cypress": "^4.2.0",
+    "multiple-cucumber-html-reporter": "^3.6.0"
+  },
+  "optionalDependencies": {
+    "@esbuild/linux-x64": "0.24.0"
+  }
+}
