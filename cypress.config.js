@@ -4,9 +4,16 @@ const preprocessor = require("@badeball/cypress-cucumber-preprocessor");
 const createEsbuildPlugin = require("@badeball/cypress-cucumber-preprocessor/esbuild");
 
 async function setupNodeEvents(on, config) {
-
+  // Plugin de Cucumber
   await preprocessor.addCucumberPreprocessorPlugin(on, config);
+
+  // Tags desde variable de entorno o config
   config.env.tags = process.env.TAGS || config.env.tags || "";
+
+  // ENV por defecto (DEV), permite override con --env ENV=TST
+  config.env.ENV = process.env.ENV || config.env.ENV || "DEV";
+
+  // Preprocesador (esbuild)
   on(
     "file:preprocessor",
     createBundler({
@@ -17,10 +24,10 @@ async function setupNodeEvents(on, config) {
   return config;
 }
 
-
 module.exports = defineConfig({
   env: {
     tags: "",
+    ENV: "DEV", // default; se puede overridear en runtime
   },
   e2e: {
     setupNodeEvents,
@@ -28,6 +35,6 @@ module.exports = defineConfig({
     chromeWebSecurity: false,
     viewportWidth: 1920,
     viewportHeight: 1080,
-    watchForFileChanges: false
+    watchForFileChanges: false,
   },
 });
