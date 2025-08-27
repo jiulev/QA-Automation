@@ -3,13 +3,12 @@
   "version": "1.0.0",
   "description": "Cypress Automation project with cucumber and API testing support.",
   "main": "index.js",
-   "scripts": {
+  "scripts": {
     "cypress:open:dev": "cypress open --e2e --browser chrome -e ENV=DEV",
     "cypress:open:tst": "cypress open --e2e --browser chrome -e ENV=TST",
-    "cypress:runner:api:tst": "cypress run --spec cypress/journeys/features/api//*.feature --browser chrome -e ENV=TST",
-    "cypress:runner:e2e:tst": "cypress run --spec cypress/journeys/features/e2e//*.feature --browser chrome -e ENV=TST"
+    "cypress:runner:api:tst": "cypress run --spec cypress/journeys/features/api/**/*.feature --browser chrome -e ENV=TST",
+    "cypress:runner:e2e:tst": "cypress run --spec cypress/journeys/features/e2e/**/*.feature --browser chrome -e ENV=TST"
   },
-
   "keywords": [
     "Cypress",
     "Gherkin",

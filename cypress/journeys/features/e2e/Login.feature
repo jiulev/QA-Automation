@@ -18,7 +18,6 @@ Feature: Frontend - Login
     And el usuario hace clic en el botón ingresar
     Then el sistema muestra el mensaje de error "Your username is invalid!"
 
-    
 
   @Frontend @Example @TC-2
   Scenario: Login con password no valida

@@ -1,18 +1,15 @@
-Feature: Frontend - Student Practice Form
+Feature: Student Register
 
-  @Frontend 
-  Scenario: Registro exitoso con datos básicos
-    Given el usuario abre el formulario de prácticas
-    When completa nombre "Julieta" y apellido "Sofia"
-    And ingresa el email "julieta@gmail.com"
-    And selecciona el género "Female"
-    And ingresa el celular "3534778460"
- And selecciona la fecha de nacimiento "04" "March" "1987"
-    And agrega las materias "Maths, English"
-    And selecciona los hobbies "Sports, Reading"
-    And sube la foto "pedido.png"
-    And ingresa la dirección "Córdoba, Argentina"
-    And selecciona el estado "NCR" y la ciudad "Delhi"
-    And envía el formulario
-    Then se muestra el modal de confirmación
-    And en el modal el campo "Student Email" muestra "julieta@gmail.com"
+@Frontend @Example @TC-3
+Scenario: Registrar un nuevo estudiante
+   Given el usuario abre la web de demoqa
+   When el usuario ingresa el nombre
+   And el usuario ingresa el apellido
+   And el usuario ingresa el email
+   And el usuario selecciona el genero
+   And el usuario ingresa su fecha de nacimiento
+   And el usuario ingresa su numero de telefono
+   And el usuario selecciona el hobbie sports
+   And el usuario ingresa su direccion
+   And el usuario hace clic en el boton submit
+   Then el sistema muestra el mensaje de exito "Thanks for submitting the form"

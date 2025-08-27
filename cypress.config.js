@@ -28,5 +28,6 @@ module.exports = defineConfig({
     chromeWebSecurity: false,
     viewportWidth: 1920,
     viewportHeight: 1080,
+    watchForFileChanges: false
   },
 });

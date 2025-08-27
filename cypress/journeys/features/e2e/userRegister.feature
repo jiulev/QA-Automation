@@ -1,17 +1,17 @@
-@registro
 Feature: Registro de usuario en Automation Exercise
   Como usuario nuevo
   Quiero registrarme en el sitio
   Para poder iniciar sesión y gestionar mi cuenta
 
-  @focus
+ 
+  @registro @focus
   Scenario: Registrar un usuario nuevo y eliminar la cuenta
     Given el usuario abre la web de automation exercise
     When el usuario hace clic en el boton signup-login
     Then el sistema muestra el titulo New User Signup!
     When el usuario ingresa el nombre y el email
     And el usuario hace clic en el boton signup
-    And el usuario selecciona su genero
+    When el usuario selecciona su genero
     And el usuario verifica que el nombre este precargado
     And el usuario verifica que el email esta precargado
     And el usuario ingresa la contraseña
@@ -24,5 +24,6 @@ Feature: Registro de usuario en Automation Exercise
     And el usuario hace clic en el boton create account
     Then el sistema muestra el mensaje ACCOUNT CREATED!
     When el usuario hace clic en el boton continue
-    And el usuario hace clic en el boton delete account
+    When el usuario hace clic en el boton delete account
     Then el sistema muestra el mensaje ACCOUNT DELETED!
+    
