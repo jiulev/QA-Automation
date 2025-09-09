@@ -1,56 +1,49 @@
+// Estos son tus steps originales, pero ahora "delegan" toda la interacción
+// a la clase ProductsPage. Mis steps quedan como un "guión" de negocio
+// y los selectores quedan preservados dentro de la Page (POM).
+
 import { Given, When, Then } from '@badeball/cypress-cucumber-preprocessor';
 
-
+// Mantengo tu lógica de URL configurable (env o default)
 const BASE_URL = Cypress.env('url_automationexercise') || 'https://automationexercise.com/';
 
-// Datos del usuario
+// Importo la Page con las acciones encapsuladas
+const productsPage = require('../../pages/ProductsPage');
 
-
+// 1) Abro la web (igual que antes, pero ahora a través de la Page)
 Given('el usuario abre la web', () => {
-  cy.visit(BASE_URL);
+  productsPage.visit(BASE_URL);
 });
 
+// 2) Hago clic en el botón "Products" del menú superior.
+//    Si cambia el selector o la posición del menú, lo arreglo en la Page.
 When('el usuario hace clic en el boton products', () => {
- cy.get('.shop-menu > .nav > :nth-child(2) > a').click();
+  productsPage.goToProducts();
 });
 
+// 3) Busco el producto "Blue Top" en la grilla y capturo su precio desde la card.
+//    Guardo el precio en @priceFromList para reusarlo.
 Then('el usuario realiza la busqueda del producto "Blue Top"', () => {
-  cy.contains('.single-products .productinfo p', 'Blue Top')
-    .should('be.visible')
-    .parents('.product-image-wrapper')   // subo al contenedor de la tarjeta
-    .find('.productinfo h2')             // busco el <h2> del precio
-    .invoke('text')                      // obtengo el texto Rs. 500
-    .then((priceText) => {
-      cy.wrap(priceText.trim()).as('priceFromList'); // guardo como alias
-    });
+  productsPage.captureListPrice('Blue Top');
 });
+
+// 4) Confirmo que el precio capturado no está vacío y tiene formato "Rs. NNN".
 When('el usuario obtiene el precio del producto', () => {
-  cy.get('@priceFromList')                      // alias que guarde en el step anterior
-    .should('match', /^Rs\.\s*\d+/);            // chequeo que no quedevacio
+  productsPage.validatePriceNotEmpty();
 });
+
+// 5) Entro al detalle del mismo producto haciendo click en "View Product".
 When('el usuario hace clic en en el boton view product', () => {
-  cy.contains('.productinfo p', 'Blue Top')     // ecuentrola tarjeta con ese nombre
-    .parents('.product-image-wrapper')          // la subo alontenedor de la tarjeta
-    .find('.choose a')                          // dentro de ese contenedor, buscar el link
-    .contains('View Product')                 
-    .click();
+  productsPage.openProductDetails('Blue Top');
 });
 
-
-
+// 6) Verifico que el detalle corresponde a "Blue Top".
 Then('el sistema muestra la informacion del producto "Blue Top"', () => {
- cy.get('.product-information h2').should('contain.text', 'Blue Top');
-
+  productsPage.assertTitleIs('Blue Top');
 });
 
-
+// 7) Comparo el precio del detalle vs. el precio capturado en el listado.
+//    Si difieren, fallo el test con un assert claro.
 Then('el sistema muestra el mismo precio del producto que se obtuvo en la busqueda', () => {
-  cy.get('@priceFromList').then((priceFromList) => {
-    cy.get('.product-information span span')
-      .first()
-      .invoke('text')
-      .then((priceFromDetail) => {
-        expect(priceFromDetail.trim()).to.eq(priceFromList);
-      });
-  });
+  productsPage.comparePriceWithDetail();
 });
