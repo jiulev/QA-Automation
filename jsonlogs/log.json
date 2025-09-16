@@ -4,6 +4,766 @@
     "elements": [
       {
         "description": "",
+        "id": "frontend---login;login-con-credenciales-válidas",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "Login con credenciales válidas",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "el usuario abre la web de Practicas",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3376000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "ingresa el usuario \"student\"",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 266000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "ingresa la contraseña \"Password123\"",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 301000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "el usuario hace clic en el botón ingresar",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1188000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "el sistema muestra el titulo \"Logged In Successfully\"",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 23000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "el sistema muestra el mensaje \"Congratulations student. You successfully logged in!\"",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 19000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Frontend",
+            "line": 3
+          },
+          {
+            "name": "@Example",
+            "line": 3
+          },
+          {
+            "name": "@TC-1",
+            "line": 3
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "frontend---login;login-con-usuario-no-valido",
+        "keyword": "Scenario",
+        "line": 14,
+        "name": "Login con usuario no valido",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 15,
+            "name": "el usuario abre la web de Practicas",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 728000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 16,
+            "name": "ingresa el usuario \"studentIncorrect\"",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 354000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 17,
+            "name": "ingresa la contraseña \"Password123\"",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 288000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 18,
+            "name": "el usuario hace clic en el botón ingresar",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 94000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 19,
+            "name": "el sistema muestra el mensaje de error \"Your username is invalid!\"",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 17000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Frontend",
+            "line": 13
+          },
+          {
+            "name": "@Example",
+            "line": 13
+          },
+          {
+            "name": "@TC-2",
+            "line": 13
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "frontend---login;login-con-password-no-valida",
+        "keyword": "Scenario",
+        "line": 23,
+        "name": "Login con password no valida",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 24,
+            "name": "el usuario abre la web de Practicas",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 504000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 25,
+            "name": "ingresa el usuario \"student\"",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 250000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 26,
+            "name": "ingresa la contraseña \"PasswordIncorrect\"",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 404000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 27,
+            "name": "el usuario hace clic en el botón ingresar",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 97000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 28,
+            "name": "el sistema muestra el mensaje de error \"Your password is invalid!\"",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 22000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Frontend",
+            "line": 22
+          },
+          {
+            "name": "@Example",
+            "line": 22
+          },
+          {
+            "name": "@TC-2",
+            "line": 22
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "frontend---login",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Frontend - Login",
+    "tags": [],
+    "uri": "cypress\\journeys\\features\\e2e\\Login.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "student-register;registrar-un-nuevo-estudiante",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "Registrar un nuevo estudiante",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "el usuario abre la web de demoqa",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6486000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "el usuario ingresa el nombre",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 558000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "el usuario ingresa el apellido",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 471000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "el usuario ingresa el email",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 738000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "el usuario selecciona el genero",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 605000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "el usuario ingresa su fecha de nacimiento",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1096000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "el usuario ingresa su numero de telefono",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 773000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "el usuario selecciona el hobbie sports",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 155000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "el usuario ingresa su direccion",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1419000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "el usuario hace clic en el boton submit",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 116000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 15,
+            "name": "el sistema muestra el mensaje de exito \"Thanks for submitting the form\"",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 104000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Frontend",
+            "line": 3
+          },
+          {
+            "name": "@Example",
+            "line": 3
+          },
+          {
+            "name": "@TC-3",
+            "line": 3
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "student-register",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Student Register",
+    "tags": [],
+    "uri": "cypress\\journeys\\features\\e2e\\Student.feature"
+  },
+  {
+    "description": "  Como usuario nuevo\n  Quiero registrarme en el sitio\n  Para poder iniciar sesión y gestionar mi cuenta",
+    "elements": [
+      {
+        "description": "",
+        "id": "registro-de-usuario-en-automation-exercise;registrar-un-usuario-nuevo-y-eliminar-la-cuenta",
+        "keyword": "Scenario",
+        "line": 8,
+        "name": "Registrar un usuario nuevo y eliminar la cuenta",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 9,
+            "name": "el usuario abre la web de automation exercise",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3743000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "el usuario hace clic en el boton signup-login",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 598000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "el sistema muestra el titulo New User Signup!",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 26000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 12,
+            "name": "el usuario ingresa el nombre y el email",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 979000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "el usuario hace clic en el boton signup",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 719000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 14,
+            "name": "el usuario selecciona su genero",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 111000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 15,
+            "name": "el usuario verifica que el nombre este precargado",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 26000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 16,
+            "name": "el usuario verifica que el email esta precargado",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 29000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 17,
+            "name": "el usuario ingresa la contraseña",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 346000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 18,
+            "name": "el usuario selecciona la fecha de nacimiento",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 474000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 19,
+            "name": "el usuario ingresa el nombre y apellido",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 444000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 20,
+            "name": "el usuario ingresa la compania",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 230000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 21,
+            "name": "el usuario ingresa la direccion principal y la direccion 2",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 808000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 22,
+            "name": "el usuario selecciona el pais",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 228000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 23,
+            "name": "el usuario ingresa el estado, la ciudad, el codigo postal y el movil",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1155000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 24,
+            "name": "el usuario hace clic en el boton create account",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1124000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 25,
+            "name": "el sistema muestra el mensaje ACCOUNT CREATED!",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 21000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 26,
+            "name": "el usuario hace clic en el boton continue",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4298000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 27,
+            "name": "el usuario hace clic en el boton delete account",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 613000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 28,
+            "name": "el sistema muestra el mensaje ACCOUNT DELETED!",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 39000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@registro",
+            "line": 7
+          },
+          {
+            "name": "@focus",
+            "line": 7
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "registro-de-usuario-en-automation-exercise",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Registro de usuario en Automation Exercise",
+    "tags": [],
+    "uri": "cypress\\journeys\\features\\e2e\\UserRegister.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
         "id": "busqueda-de-productos;buscar-un-producto-exitosamente-y-validar-que-devuelve-el-correcto",
         "keyword": "Scenario",
         "line": 3,
@@ -19,7 +779,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 4417000000
+              "duration": 2857000000
             }
           },
           {
@@ -32,7 +792,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2612000000
+              "duration": 2514000000
             }
           },
           {
@@ -58,7 +818,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 16000000
+              "duration": 31000000
             }
           },
           {
@@ -71,7 +831,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1021000000
+              "duration": 1161000000
             }
           },
           {
@@ -84,7 +844,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 22000000
+              "duration": 19000000
             }
           },
           {
@@ -97,7 +857,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 33000000
+              "duration": 35000000
             }
           }
         ],
