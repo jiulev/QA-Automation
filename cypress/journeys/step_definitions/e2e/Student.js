@@ -20,15 +20,15 @@ Given('el usuario abre la web de demoqa', () => {
 
 
 When('el usuario ingresa el nombre', () => {
-  cy.get('#firstName').clear().type('Julieta');
+  cy.get('#firstName').clear().type('Mayra');
 });
 
 When('el usuario ingresa el apellido', () => {
-  cy.get('#lastName').clear().type('Sofia');
+  cy.get('#lastName').clear().type('Viltes');
 });
 
 When('el usuario ingresa el email', () => {
-  const email = 'julieta.sofya@gmail.com';
+  const email = 'Mayra@gmail.com';
   cy.wrap(email).as('email');
 
   cy.get('#userEmail')

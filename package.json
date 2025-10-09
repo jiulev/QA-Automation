@@ -18,14 +18,14 @@
     "Testing",
     "Automation"
   ],
-  "author": "Kiuvi Services",
+  "author": "Mayra Viltes",
   "license": "ISC",
   "devDependencies": {
     "@badeball/cypress-cucumber-preprocessor": "^22.2.0",
     "@bahmutov/cypress-esbuild-preprocessor": "^2.2.6",
     "@cucumber/cucumber": "^11.2.0",
     "@faker-js/faker": "^9.6.0",
-    "cypress": "^14.2.1",
+    "cypress": "^14.5.4",
     "cypress-plugin-api": "^2.11.1",
     "esbuild": "^0.25.9",
     "eslint": "^9.22.0",
